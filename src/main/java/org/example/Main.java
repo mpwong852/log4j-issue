@@ -1,10 +1,10 @@
 package org.example;
 
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class Main {
-    private static final Logger log = Logger.getLogger(Main.class.getName());
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        log.info("Hello world!");
+        logger.info("Hello world!");
     }
 }
