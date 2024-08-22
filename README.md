@@ -7,13 +7,13 @@ mvn clean package
 java -DenableLogback=true -Dlog4j2.configurationFile=src/config/log4j2.xml -jar log4j-issue-test.jar
 ```
 
-when I use "maven-assembly-plugin" 3.6.0, it show me correct log
+when I use "maven-assembly-plugin" <b>3.6.0</b> + log4j <b>2.23.1</b>, it show me correct log <br>
+when I use "maven-assembly-plugin" <b>3.7.0</b> + log4j <b>2.20.0</b>, it will also show me correct log
 ```
 2024-08-22 11:07:13,284582| INFO|TID=1|main|Main:|Hello world!
 ```
 
-When I update to "maven-assembly-plugin" to 3.7.0 / 3.7.1, it will show me uncorrect log
-
+When I update to "maven-assembly-plugin" <b>3.7.0</b>  + log4j <b>2.23.1</b>, it will show me uncorrect log.
 ```
 ERROR StatusLogger Unrecognized format specifier [d]
 ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
